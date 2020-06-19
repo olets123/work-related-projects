@@ -87,16 +87,3 @@
         student-playlist shows all the playlists, it gets it data from the db through playlist-view.php.
 
     
-
-    --- Description of our experience of the project ---
-
-       
-        Positive things about the project:
-
-            - All of the group members learned a lot when working with the Polymer and PHP together
-            - We developed our own programming skills
-
-       
-        Negative things with the project:
-
-            - We didn't manage to finish the hole project, but we tried our best and managed to complete    some of the core functions
