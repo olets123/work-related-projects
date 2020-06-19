@@ -1,86 +1,102 @@
-# Polymer App Toolbox - Starter Kit
+    Project 2
 
-[![Build Status](https://travis-ci.org/Polymer/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/polymer-starter-kit)
+    WWW-Teknologi, IMT2291, Vår 2020
 
-This template is a starting point for building apps using a drawer-based
-layout. The layout is provided by `app-layout` elements.
+    Gruppemedlemmer:
 
-This template, along with the `polymer-cli` toolchain, also demonstrates use
-of the "PRPL pattern" This pattern allows fast first delivery and interaction with
-the content at the initial route requested by the user, along with fast subsequent
-navigation by pre-caching the remaining components required by the app and
-progressively loading them on-demand as the user navigates through the app.
+    Odd Arne Hagelund, Kristoffer Lindbak og Ole Thomas Skogli
 
-The PRPL pattern, in a nutshell:
 
-* **Push** components required for the initial route
-* **Render** initial route ASAP
-* **Pre-cache** components for remaining routes
-* **Lazy-load** and progressively upgrade next routes on-demand
+    --- Step by Step Guide for Project 2 ---
 
-### Setup
 
-##### Prerequisites
+        Step 1) Open project in code editor and open your database:
+                - import project2.SQL into your DB
+        
+        Step 2) Launch the terminal 
 
-Install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
-[npm](https://www.npmjs.com) (we assume you have pre-installed [node.js](https://nodejs.org)).
 
-    npm install -g polymer-cli@next
+        Step 3) Type inn: cd app in terminal
 
-##### Initialize project from template
 
-    mkdir my-app
-    cd my-app
-    polymer init polymer-3-starter-kit
+        Step 4) When inside the folder "app", type inside terminal: npm install to install all dependencies for polymer project 2
 
-### Start the development server
 
-This command serves the app at `http://127.0.0.1:8081` and provides basic URL
-routing for the app:
+        Step 5) Type inside terminal: polymer serve
 
-    npm start
 
-### Build
+        Step 6)  Go to main browser, NB! open at localhost:8081/
+                    (if open from terminal CORS problem will appear)
 
-The `npm run build` command builds your Polymer application for production, using build configuration options provided by the command line or in your project's `polymer.json` file.
 
-You can configure your `polymer.json` file to create multiple builds. This is necessary if you will be serving different builds optimized for different browsers. You can define your own named builds, or use presets. See the documentation on [building your project for production](https://www.polymer-project.org/3.0/toolbox/build-for-production) for more information.
+        Step 7) When Polymer Application launched, you can eihter register a user or you can login
 
-The Polymer Starter Kit is configured to create three builds. These builds will be output to a subdirectory under the `build/` directory as follows:
 
-```
-build/
-  es5-bundled/
-  es6-bundled/
-  esm-bundled/
-```
+        Step 8) Go to Login, type in created user -> we have created three users. 
+                One with admin premissions and one with teacher premissions and one with student premissions.
+                (username: admin@admin password: passord)
+                (username: teacher@teacher password: passord)
+                (username: student@student password: passord)
 
-* `es5-bundled` is a bundled, minified build with a service worker. ES6 code is compiled to ES5 for compatibility with older browsers.
-* `es6-bundled` is a bundled, minified build with a service worker. ES6 code is served as-is. This build is for browsers that can handle ES6 code - see [building your project for production](https://www.polymer-project.org/3.0/toolbox/build-for-production#compiling) for a list.
-* `esm-bundled` is a bundled, minified build with a service worker. It uses standard ES module import/export statements for browsers that support them.
 
-Run `polymer help build` for the full list of available options and optimizations. Also, see the documentation on the [polymer.json specification](https://www.polymer-project.org/3.0/docs/tools/polymer-json) and [building your Polymer application for production](https://www.polymer-project.org/3.0/toolbox/build-for-production).
+        Step 9) If admin: access to all pages. 
+                If teacher: possibility to upload videos and playlist. 
+                If student: access to watch videos and playlists. 
+                If not user: Watch videos and search for them
 
-### Preview the build
 
-This command serves your app. Replace `build-folder-name` with the folder name of the build you want to serve.
 
-    npm start build/build-folder-name/
+        Step 10) Click on videos/videolist to access the selected video with VTT-text
+        
 
-### Run tests
 
-This command will run [Web Component Tester](https://github.com/Polymer/web-component-tester)
-against the browsers currently installed on your machine:
 
-    npm test
+    --- Prosjekt 2 contains of 6 main folders ---
 
-If running Windows you will need to set the following environment variables:
+        api: contains of two folders: classes and php:
+        - these folders contains files for api part of the project
+    
+        images:
+        - contains images uploaded
+    
+        node_modules:
+        - Polymer 3.0 folder, contains web components
+    
+        src:
+        - contains all javascript files for the polymer clientside application
 
-- LAUNCHPAD_BROWSERS
-- LAUNCHPAD_CHROME
+        test:
+        - files from polymer test
+    
+        wireframes:
+        - contains wireframes from the project
 
-Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-variables-impacting-local-browsers-detection)
+        Other files outside folders:
+        - files from installing Polymer 3.0
+        - DOM structure of the project
+        
+        
+    --- DOM structure (See the picture in app/DOM/DOM.jpg) ---
+        All of the LitElement/JS classes extends LitElement. 
+        my-app connects everything together, and calls the other classes as needed.
+        user-handler handles everything about the user: Login, Logout, Register, Loginstatus. Each one of these functions have a seperate php file which handles the data transfer to the DB: register, logout, loginStatus.php.
+        admin-request handles the registered members who wants to become a teacher and gives them teacher permission if an admin aproves it. Data for showing the registered members who wants teacher privilege comes thtrough request.php. Granting them this privilege is done through updatePremission.php.
+        video-view is dependent on cue-viewer, video-viewer and texted-video to get everything to work. These classes handles showing video and text. The video and text data from the db and files comes from video.php through the video-view class.
+        video-upload handles the video uploads, it updates the database and moves the files to the correct folder through upload.php.
+        teacher-playlist can both create playlist and add a video to a selected playlist. It creeates playlist through playlist.php and it adds a video to a playlist through spilleliste.php.
+        student-playlist shows all the playlists, it gets it data from the db through playlist-view.php.
 
----
+    
 
-Looking for our older PSK2 Polycast or migration blog post? See [the previous README](https://github.com/Polymer/polymer-starter-kit/blob/v3.2.1/README.md).
+    --- Description of our experience of the project ---
+
+       
+        Positive things about the project:
+
+            - All of the group members learned a lot when working with the Polymer and PHP together
+            - We developed our own programming skills
+
+       
+        Negative things with the project:
+
+            - We didn't manage to finish the hole project, but we tried our best and managed to complete    some of the core functions
