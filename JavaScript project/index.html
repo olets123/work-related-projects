@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet'/>
+  <link rel="stylesheet" href="css/stilfullt.css">
+  <title>Innlevering nr 3</title>
+</head>
+<body>
+  <header>
+    <h1>Obligatorisk innlevering nr.3</h1>
+  </header>
+  <nav>
+    <ul>
+
+    </ul>
+  </nav>
+  <section id="førsteSide">
+    <h1>Om prosjekt 3</h1>
+    <div class="slideshow"></div>
+
+    <p>Velkommen til prosjekt 3, dette er igjen en Single Page Application, men litt forbedret fra forrige gang.
+      Denne gangen ønsker vi at om en bruker laster siden på nytt så skal man fortsatt være på samme side som når vedkommende trykker reload.
+      </p>
+      <p>Dette er starten på et online kontaktregister, kontakter lagres via</p>
+      <a href="http://folk.ntnu.no/oeivindk/imt1441/storage/" target="_blank">Øivinds superregister: http://folk.ntnu.no/oeivindk/imt1441/storage/</a>
+      <p>Siden "Søk etter kontakt" gir muligheten til å søke etter kontakter. Når du har gjort et ønsket søk kan du klikke på en av kontaktene, her vil du bli lastet inn på en ny side hvor du kan redigere kontaktene.
+        Siden inneholder også et kart som viser adressen og sted på den ønskede kontakten.
+        "Legg til kontakter" benyttes for å legge til kontakter.</p>
+
+  </section>
+  <section id="kontaktSøk" class="kontaktListe">
+    <h1>Søk etter kontakter</h1>
+    <p>Skriv inn navn, tlf eller epost i søkefeltet.</p>
+    <form>
+      <label for="skrivinn"> Skriv inn og søk:</label><input type="text" id="kontaktSøker" placeholder="search">
+    </form>
+    <h1>Kontaktliste for kontakter lagt til:</h1>
+    <ul class="visKontakter">
+    </ul>
+
+  </section>
+  <section id="leggTilKontakt">
+    <h1>Her kan du legge til kontakter.</h1>
+    <form>
+      <label for="fornavn">Fornavn</label><input type="text" id="fornavn"><br>
+      <label for="etternavn">Etternavn</label><input type="text" id="etternavn"><br/>
+      <label for="tlf">Tlf</label><input type="text" id="tlf"><br>
+      <label for="email">E-post</label><input type="text" id="email"><br>
+      <label for="gateadresse">Gateadresse</label><input type="text" id="gate"><br>
+      <label for="postnummer">Postnummer</label><input type="text" id="postnr"><br>
+      <label for="poststed">Poststed</label><input type="text" id="poststed"><br>
+      <button type="button" id="leggTil">Legg til kontakt</button>
+      <div class="printAlert"></div>
+    </form>
+  </section>
+  <section id="oppdaterKontakt">
+    <h1>Her kan du oppdatere kontakter.</h1>
+    <form>
+      <label for="fornavn">Fornavn</label><input type="text" id="fornavn"><br>
+      <label for="etternavn">Etternavn</label><input type="text" id="etternavn"><br/>
+      <label for="tlf">Tlf</label><input type="text" id="tlf"><br>
+      <label for="email">E-post</label><input type="text" id="email"><br>
+      <label for="gateadresse">Gateadresse</label><input type="text" id="gate"><br>
+      <label for="postnummer">Postnummer</label><input type="text" id="postnr"><br>
+      <label for="poststed">Poststed</label><input type="text" id="poststed"><br>
+      <button type="button" id="oppdater">Oppdater kontakt</button>
+      <div class="printAlert2"></div>
+    </form>
+    <div id="map"></div>
+    <script src='https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js'></script>
+<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+  </section>
+  <script src="javascript/classes/Menu.js" charset="utf-8"></script>
+  <script>
+    new Menu('nav>ul', 'section', 'javascript/menu.json');
+    </script>
+    <script src="javascript/slideshow.js"></script>
+  <script src="javascript/classes/kontakter.js"></script>
+  <script src="javascript/leggTilKontakter.js"></script>
+
+    <script src="javascript/onsubmit.js" charset="utf-8"></script>
+
+
+</body>
+</html>
