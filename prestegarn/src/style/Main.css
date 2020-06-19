@@ -1,0 +1,47 @@
+/* MAIN.CSS */
+
+.mainWrapper {
+/*   margin: 0 5%; */
+/*   min-width: 100%;
+  min-height: 100%;
+  position: relative; */
+}
+/*
+.mainWrapper div {
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 4rem auto auto 4rem;
+    grid-template-rows: 9rem auto;
+    grid-template-areas: 
+        "splitter header header splitter2"
+        "splitter text1 images splitter2"
+        "splitter text1 images splitter2"
+        "splitter text1 images splitter2";
+    position: relative;
+    justify-items: center;
+}
+
+.header {
+    grid-area: header;
+    font-size: 4rem;
+}
+
+.mainText {
+    grid-area: text1;
+    padding-right: 8rem;
+    font-family: adobe-jenson-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7rem;
+}
+
+.images {
+    grid-area: images;
+} */
+
+/* Mobil */
+
+@media only screen and (max-width: 600px) {
+    .mainWrapper { margin: 0; width: 100%; }
+}

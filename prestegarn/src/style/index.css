@@ -1,0 +1,76 @@
+/*___Index.css___*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem; /* =14px */
+  overflow-x: hidden;
+}
+
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#header, button, label, input, textarea, .DatePicker, .eDate, .yearText, h2, h1, h3, h4, h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main_header {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sub_header {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  padding-top: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+p::before { content: "\A"; }
+
+.header {
+  font-family: p22-cezanne-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6rem;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.sub-header {
+  font-size: 3rem; 
+}
+
+.overflow-hidden {
+  overflow: hidden; 
+}
+
+
+
+/* Mobil */
+
+@media only screen and (max-width: 900px) {
+  .header { font-size: 4rem; line-height: 4rem;} 
+  .main_header { font-size: 30px; line-height: 30px; padding: 15px; margin: 0; }
+  .sub_header { font-size: 25px; line-height: 25px; padding: 15px; margin: 0; }
+}

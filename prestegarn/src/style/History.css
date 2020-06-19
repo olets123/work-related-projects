@@ -1,0 +1,135 @@
+/*_______History.css_______*/
+
+.timeWrapper {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  height: 100%;
+}
+
+.timeElement {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.yearBox {
+  position: absolute;
+  right: 8vw;
+  top: 0;
+  z-index: 1;
+  height: 80%;
+}
+
+.yearBox h2  {
+  font-size: 20rem;
+  color: #EAE7DF;
+}
+
+.timeContent {
+  position: absolute;
+  top: 17vh;
+  right: 4vw;
+  width: 500px;
+  z-index: 2;
+  height: 80%;
+  margin: 2rem 0 4rem 0;
+}
+
+.timeText {
+  flex-basis: 50%;
+}
+
+
+.timeText h2, .timeText h1, .timeText p { margin: 0; padding: 0;}
+.tContent, .year { position: sticky; }
+.year { top: 5%; }
+.tContent { top: 20%; }
+
+.timeText h1::first-letter {
+  text-transform: uppercase;
+}
+
+.timeImages {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  z-index: -2;
+  width: 50%;
+}
+
+.timeElement .imgFrame {
+  width: 100%;
+  overflow: hidden;
+}
+.timeImage {
+  width: 100%;
+}
+
+.historyFilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  border-bottom: .2rem solid #F9cf36;
+}
+
+.search { 
+  margin: 0 0 0 2%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radio {
+  position: relative;
+  margin: 0 2% 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radioButton {
+  cursor: pointer;
+}
+
+.radioButton.active {
+  background-color: #3B3B3B;
+  border: .2rem solid #3B3B3B;
+  color: white;
+}
+
+.imgFrame .copyright {
+  color: black;
+  font-size: 1.2rem;
+}
+
+
+/* Mobil */
+
+@media only screen and (max-width: 700px) {
+  .timeImages { width: 100%; }
+  .imgFrame img { height: 100%;width: 100vw; opacity: .5;}
+  .imgFrame { height: 100%; width: 100vw; }
+  .timeText h2 { font-size: 10rem; color: rgb(163, 161, 155); } 
+  .timeText h1 { font-size: 2rem; }
+  .timeText p { font-size: 1.4rem; }
+  .yearBox { right: 18vw; top: -3vh; padding-bottom: 5rem;}
+  .timeContent { top: 80px; width: 80%;}
+  .year { top: 5%; z-index: 20; }
+  .tContent { top: 18%; background-color: white; padding: 20px;}
+  .search, .radio { flex-basis: 100%; margin-bottom: 1rem; }
+  #search { width: 20rem; }
+}

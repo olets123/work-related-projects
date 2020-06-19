@@ -1,0 +1,121 @@
+/* HOME EXPLORE */
+.exploreHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2%;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 100px;
+}
+
+.main_header.exploreHeader { 
+    width: 80%;
+    margin-left: 40px;
+    text-align: left;
+}
+
+
+.exploreFrame {
+    margin: 0 2%;
+    position: relative;
+    overflow: hidden;
+    z-index: -7;
+    height: auto; 
+    width: 600px;
+}
+
+.exploreIntro, .exploreHistory, .exploreLocation {
+    margin: 4rem 0; 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 300px;
+}
+
+.exploreLocation {
+    height: 730px;
+}
+
+.exploreLocation .exploreBtn {
+    bottom: inherit;
+    top: 200px;
+}
+.exploreFrame img { max-width: 100%; }
+.exploreHome h3, .exploreHome h4 { 
+    padding: 0;
+    margin: 0;
+    color: rgb(57, 57, 57); 
+}
+
+.exploreHome .text {
+    display: inline-block;
+    position: relative;
+    width: 500px;
+}
+
+.exploreHome .text p{
+    background-color: white;
+
+}
+
+/* Intro */
+
+.exploreHome h3 a {
+    color: rgb(57, 57, 57); 
+    text-decoration: none;
+}
+
+.exploreHome h3 a:hover {
+    color: rgb(87, 87, 87);
+    text-decoration: underline;
+}
+
+#one.exploreFrame img {
+    position: absolute;
+}
+
+.exploreIntro .exploreBtn {
+    bottom: 0;
+}
+
+/* !Intro */
+/* History */
+
+.exploreHistory .exploreFrame img { min-width: 100%; }
+
+/* !History */
+/* Location */
+
+
+.exploreFrame.mapFrame {
+    height: 500px;
+}
+
+.exploreFrame.mapFrame img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.exploreLocation {
+    padding-bottom: 5rem;
+}
+
+.exploreFrame.mapFrame { pointer-events: none; }
+.exploreFrame.mapFrame a { cursor: pointer; }
+/* !Location */
+
+@media only screen and (max-width: 900px) {
+    .exploreIntro, .exploreHistory, .exploreLocation 
+        { height: 400px; flex-direction: column; width: 100%; padding: 15px;}
+    .eDate.small .eMonth { font-size: 3rem; }
+    .eDate.small .eDay { font-size: 4rem; line-height: 4rem; }
+    .exploreFrame { height: 250px; width: 100%; }
+    .exploreHome .text { width: 90%; padding: 15px; height: inherit; }
+    .main_header.exploreHeader { width: 100%; text-align: left; }
+    .exploreLocation { height: 730px; }
+    .exploreLocation .exploreFrame { height: 1000px; }
+}  
+

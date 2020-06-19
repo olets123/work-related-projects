@@ -1,0 +1,175 @@
+/*________________________________________________ App ________________________________________________*/
+.App {
+  min-height: 100vh;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  position: relative;
+}
+
+.backgroundImage {
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0.2;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/*________________________________________________ Header ________________________________________________*/
+#headerDiv {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.navWrapper ul { 
+  padding-top: 1rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mobileNavWrapper ul {
+  padding: 0;
+}
+
+
+/*________________________________________________ Main ________________________________________________*/
+
+/**
+  * main color: #F9cf36;
+  * sub color:  #3B3B3B;
+*/
+
+main {
+  min-height: 100%;
+  flex: 1 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 40vh;
+}
+
+/*________________________________________________ Footer ________________________________________________*/
+
+footer {
+  background-color: #3B3B3B ;
+  text-align: center;
+  margin-top: 5%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 30rem;
+  min-height: 29rem;
+}
+
+/*________________________________________________ Input ________________________________________________*/
+
+input, .radioButton, textarea, .react-daterange-picker, select {
+  border-radius: 0.4rem;
+  border: 0.2rem solid transparent;
+  color: black;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  margin: 0 .5rem 0 0;
+  white-space: nowrap;
+  border-color: black;
+  background-color: transparent;
+}
+
+input:focus, textarea:active , .selectDiv select:focus {
+  border: .2rem solid #F9cf36;
+  color: black;
+}
+
+input[type="submit"]:hover, .radioButton:hover {
+  border: .2rem solid #F9cf36;
+  background-color: #F9cf36;
+
+}
+
+.inputs {
+  cursor: text;
+}
+
+.inputs:hover, input:hover, select:hover {
+  background-color: #f9f9f9;
+}
+
+button, a, input[type="submit"], input, .radioButton, textarea, .react-daterange-picker, select {
+  cursor: pointer;
+}
+
+.btn_main {
+  border-radius: 0.4rem;
+  border: .2rem solid #3B3B3B;
+  color: black;
+  display: inline-block;
+  font-weight: 200;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: sans-serif; 
+  position: absolute;
+  right: 0;
+  bottom: 6%;
+}
+
+.btn_main:hover {
+  border: .2rem solid #F9cf36;
+  background-color: #F9cf36;
+}
+
+.btn_main:active, .radioButton:active, input[type="submit"]:active {
+  border: .2rem solid #3B3B3B;
+  background-color: #3B3B3B;
+  color: white;
+}
+
+/* ___________________INTRO________________ */
+.introWrapper {
+  text-align: center;
+  border-bottom: .2rem solid #F9cf36;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.intro {
+  width: 65%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Mobil */
+@media only screen and (max-width: 900px) {
+  main { padding-top: 30px; }
+  #headerDiv ul { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .introWrapper { width: 90%; text-align: left; margin-top: 40px; }
+  .introWrapper .sub_header { width: 100%; padding: 15px; }
+  .intro { padding: 15px; width: 90%; text-align: left;}
+  .btn_main { right: 10px; }
+}
+
+

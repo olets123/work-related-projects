@@ -1,0 +1,30 @@
+.infoWrapper {
+    width: 90%;
+    margin: 0 auto 100px auto;
+}
+
+.infoWrapper .info p, .infoWrapper .info a {
+    padding-left: 20px;
+}
+
+.infoWrapper .info a {
+    font-size: 1.4rem;
+    color: black;
+}
+
+.infoWrapper .info a:hover {
+    text-decoration: underline;
+}
+
+.infoWrapper .info {
+    margin: 0;
+    padding: 30px;
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+    border-bottom: .2rem solid #F9cf36;
+}
+
+@media only screen and (max-width: 600px) { 
+    .infoWrapper .info { height: 200px; padding: 0 ; width: 100%; }
+}

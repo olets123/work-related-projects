@@ -1,0 +1,72 @@
+/* event detail */
+
+.detail.centered { padding-bottom: 0 }
+
+.eBuy.btn_main {
+    right: 18rem;
+}
+.eDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.program {
+    width: 90%;
+    padding: 2%;
+}
+.program ul {
+    list-style: none;
+    padding: 0;
+}
+.program ul li {
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+.sponsors {
+    width: 90%;
+
+}
+
+.socialMedia {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40rem;
+    height: 30rem;
+}
+
+.fBox .cover {
+    width: 30rem;
+    overflow: hidden;
+}
+
+.fBox .friendFrame {
+    width: 30rem;
+    overflow: hidden;
+}
+.fBox .friendFrame img{
+    width: 100%;
+}
+
+.detailBtn {
+    right: 50px;
+    bottom: 0;
+}
+
+.sponsorWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .detail.centered { padding-bottom: 70px; }
+}

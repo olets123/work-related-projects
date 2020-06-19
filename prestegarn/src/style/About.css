@@ -1,0 +1,104 @@
+/* ABOUT.CSS */
+
+.aboutDiv {
+  position: relative;
+  height: 100%;
+  padding-top: 40px;
+  width: 90%;
+  margin: 0 auto 200px auto;
+  border-top: .2rem solid #F9cf36;
+}
+
+.aboutDiv h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.titleBox { 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+}
+
+.anitaDiv h2 {
+  text-align: right;
+}
+
+.anitaDiv p {
+  text-align: justify;
+}
+
+.anitaDiv p, .hansDiv p {
+  padding: 0;
+}
+
+.anitaDiv, .hansDiv {
+  flex-basis: 25%;
+  width: 20vw;
+  position: relative;
+  margin: 0 2rem;
+}
+.anitaDiv {
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+.hansDiv {
+  justify-self: flex-end;
+}
+.mainImgFrame {
+  flex-basis: 40%;
+  overflow: hidden;
+}
+.mainImgFrame img {
+  width: 100%;
+}
+.mainDesc{
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7rem;
+}
+.mainText { flex-basis: 50%; margin-bottom: 2rem; }
+.mainText p { margin: 0; padding: 0 2rem; }
+.anitaFrame, .hansFrame {
+  overflow: hidden;
+  flex-basis: 20%;
+  height: 35rem;
+}
+.anitaFrame img, .hansFrame img {
+  height: 100%;
+  transform: translate(-10rem, 0rem);
+}
+
+/* Mobil */
+
+@media only screen and (max-width: 1650px) {
+  .aboutDiv h2 { font-size: 4rem; line-height: 4rem; }
+}
+
+@media only screen and (max-width: 980px) {
+  .titleBox { flex-direction: row; flex-wrap: wrap; }
+  .mainImgFrame { flex-basis: 100vw; width: 100%; order: -1;  }
+  .mainImgFrame img { height: auto; width: 100%;}
+  .anitaDiv { flex-basis: 100%; order: 0; }
+  .hansDiv { flex-basis: 100%; order: 1 }
+  .mainDesc { flex-direction: row; }
+  .anitaFrame, .hansFrame { flex-basis: 45%; height: 35rem;}
+  .anitaFrame img, .hansFrame img { height: 100%; width: auto;}
+  .mainText { order: -1; width: 100vw; flex-basis: 100%; transform: none;}
+  .anitaDiv, .hansDiv { margin: 0; }
+  .anitaDiv p, .anitaDiv h2 { text-align: left; }
+}
+
+@media only screen and (max-width: 500px) {
+  .mainImgFrame img { height: auto; width: 100vw; transform: translate(-0, 0) }
+  .anitaDiv { flex-basis: 100vw; order: 0; padding: 2rem;}
+  .hansDiv { flex-basis: 100vw; order: 1; padding: 2rem;}
+  .hansDiv h2, .anitaDiv h2 { font-size: 3rem; line-height: 3rem; margin-top: 1rem; }
+  .hansDiv h2 { text-align: left; }
+  .hansDiv p, .anitaDiv p { margin: 5rem 0 0 0; }
+  .anitaFrame, .hansFrame { flex-basis: 45%; height: 20rem; width: 40vw; justify-self: flex-end; align-self: flex-end; }
+  .anitaFrame img, .hansFrame img { height: 100%; width: auto; transform: translate(-4rem, 0);}
+}

@@ -1,0 +1,215 @@
+/* _______Events.css_____*/
+
+/* NY EVENT */
+
+.eventCtrlDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.eDate {
+    margin-top: .7rem;
+    flex-basis: 16%;
+    position: relative;
+}
+
+.eDay, .eMonth {
+    margin: 0; 
+    padding: 0; 
+    color: #BCBBB7; 
+    
+}
+.eDay { 
+    font-size: 6.5rem; 
+    line-height: 7rem;
+    border-bottom: .2rem solid #F9cf36;
+    width: 70px;
+}
+.eMonth { 
+    text-transform: uppercase; 
+    font-size: 4rem; 
+    width: 30%; 
+}
+
+.eventInfo { margin: 0 2% 0 0; width: 90%; }
+
+.eventDiv {
+    margin: 2% auto;
+    position: relative;
+    height: 40rem;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+}
+
+#imageFrame {
+   flex-basis: 50%;
+   height: 70%;
+   margin-top: 1.5rem;
+   overflow: hidden;
+   position: relative;
+}
+
+#imageFrame img {
+    min-width: 100%;
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+}
+.detail {
+    flex-basis: 34%;
+    color: black;
+    height: 70%;
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.detail .eventTitle {
+    margin: 0;
+    padding-bottom: 5px;
+    flex-basis: 100%;
+}
+
+.detail .eventTitle  a {
+    text-decoration: none;
+    color: black;
+}
+
+.detail .eventTitle a:hover {
+    color: rgb(83, 83, 83);
+    text-decoration: underline;
+}
+
+
+.detail .eventTags { 
+    flex: 0 1 auto;
+    width: 50vw;
+}
+
+.eventDate {
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+.eventDate i {
+    padding: 0 .5rem 0 .1rem;
+    line-height: 2rem;
+    color: #F9cf36;
+}
+
+.tagBtn {
+    border: none;
+    color: #3B3B3B;
+    display: inline-block;
+    font-weight: 300;
+    padding: 0;
+    margin: 0 .5rem 0 0;
+    white-space: nowrap;
+    background-color: transparent;   
+}
+
+.tagBtn:hover {
+    font-weight: bold;
+    border-bottom: .1rem solid #F9cf36;
+}
+
+.eventHash {
+    font-style: italic;
+    font-weight: 100;
+    margin-right: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+.eventHash:hover {
+    text-decoration: underline;
+}
+.cover .socialMedia a i { color: black; }
+
+.selectDiv select{
+    appearance: none;
+    margin: 5px;
+}
+
+select {
+    width: 120px;
+    padding: 5px 10px 5px 5px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../icons/arrow-down-solid.svg') 87% / 10% no-repeat #fff;
+  }
+  
+  
+  /* CAUTION: IE hackery ahead */
+  select::-ms-expand { 
+      display: none; /* remove default arrow in IE 10 and 11 */
+  }
+  
+  /* target Internet Explorer 9 to undo the custom arrow */
+  @media screen and (min-width:0\0) {
+      select {
+          background:none\9;
+          padding: 5px\9;
+      }
+  }
+
+.eventHandlers .radio {
+    height: 33px;
+    margin-top: 5px;
+}
+
+.backDiv {
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+}
+
+.eDiv { position: relative; }
+
+/* main */ 
+.eventHandlers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: .2rem solid #F9cf36;
+}
+
+.wrapperHandlerDiv {
+    width: 100%;
+
+}
+
+.filterEvents {
+    padding: 0;
+    border-radius: 0.4rem;
+    border: 0.2rem solid transparent; 
+}
+
+
+@media only screen and (max-width: 600px) {
+    .eventDiv { flex-direction: column; height: 60rem; padding-bottom: 5rem;}
+    #imageFrame { flex-basis: 100%; height: 100%; width:100%;}
+    .detail { padding-left: 0; }
+    .eMonth, .eDay { margin-left: 0; }
+    .eventDetailBtn { bottom: 0; }
+    #searchForm label, .selectDiv label  { display: none; }
+}
+
+@media only screen and (max-width: 950px) {
+    .selectDiv select {
+        margin-top: 1rem;
+        width: 24.3rem;
+    }
+    .eventBtn button, .eventBtn a { font-size: 1.4rem; }
+    .eventHandlers { justify-content: center; }
+}

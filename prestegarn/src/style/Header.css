@@ -1,0 +1,156 @@
+/* HEADER.CSS */ 
+header div {
+  height: 100%;
+  width: 100%;
+}
+
+header.mobile div .navWrapper {
+  display: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  max-height: 100%;
+}
+
+.navigation > nav:nth-child(1) > ul:nth-child(1) {
+  padding-left: 0px;
+}
+
+nav {
+  max-height: 100%;
+  width: 100%;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0 auto;
+  height: 7rem;
+  width: 90%;
+
+}
+.navigation li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li:not(:last-child) {
+  padding: 0 5rem 0 0;
+}
+
+.navigation li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.9rem;
+}
+
+li a:hover {
+  border-top: .3rem solid black;
+}
+.active {
+  font-weight: bolder;
+  border-top: .3rem solid #F9cf36;
+}
+
+.smaller li a {
+  font-size: 1.9rem;
+}
+.smaller {
+  background-color: white;
+  height: 5rem;
+}
+.smaller ul {
+  height: 3rem;
+}
+
+/* MOBILE NAV */
+.mobileNav { 
+  display: none;
+  background-color: #3b3b3b;
+  position: fixed;
+  height: 7rem;
+  width: 100%;
+  z-index: 6;
+}
+
+.burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  left: -1rem;
+  top: -1rem;
+  width: 7rem;
+  height: 7rem;
+  flex-basis: 20%;
+  z-index: 7;
+}
+
+.burger i { 
+  color: #F9cf36;
+}
+
+.mobileNav .nav {
+  background-color: #3b3b3b;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.mobileNav li:nth-child(odd){
+  background-color: #464646;
+}
+
+.mobileNav .nav.show {display: block;}
+.mobileNav .nav.hidden {display: none;}
+
+.mobileNavWrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav.show .mobileNavWrapper ul {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobileNav ul {
+  padding: 0;
+}
+
+.mobileNavWrapper li {
+  list-style: none;
+  padding: 2rem 0;
+  width: 100%;
+  font-family: sans-serif;
+}
+.mobileNavWrapper li a { 
+  text-decoration: none; color: #F9cf36; width: 100%; padding: 0 10vw;
+  font-family: sans-serif;
+}
+.mobileNavWrapper li a.active { border-top: .3rem solid #F9cf36; }
+
+/* Mobil */
+
+
+@media only screen and (max-width: 1000px) {
+  .navigation li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #header { display: none; }
+  .mobileNav { display: block; }
+}

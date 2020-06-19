@@ -1,0 +1,148 @@
+/*________ Explore _______*/
+.friendBox {
+  text-align: center;
+}
+
+.friendContent {
+  width: 90%;
+  margin: 0 auto 20% auto;
+}
+
+.bestFriends {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  height: 250px;
+}
+
+.friendTextBox {
+  grid-area: text;
+  position: relative;
+  text-align: left;
+  flex-basis: 50%;
+  height: 100%;
+  order: 0;
+}
+
+.bestFriends .imageContainer {
+  overflow: hidden;
+  flex-basis: 50%;
+  max-width: 500px;
+  order: 1;
+  position: relative;
+}
+
+.friendImage {
+  max-width:100%;
+  max-height:100%;
+}
+
+.friendTitle {
+  font-family: sans-serif;
+  padding-bottom: 14px;
+  border-bottom: 0.1rem solid #F9cf36;
+}
+
+.friendLine {
+  width: 10rem;
+  border-bottom: 0.3rem solid #F9cf36;
+}
+
+.friendText {
+  font-family: sans-serif;
+  height: 100%;
+  position: relative;
+}
+
+.contactInfo {
+  display: inline-block;
+}
+
+.contactInfo i,
+.contactInfo p {
+  display: inline;
+}
+
+.contactInfo p {
+  padding-right: 10px;
+}
+
+.friendIntro {
+  margin: 0 auto 4rem auto;
+  padding-bottom: 2rem;
+  width: 90%;
+  border-bottom: .2rem solid #F9cf36;
+}
+
+.friendIntroText {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+}
+
+.socialMedia.friendSocialMedia {
+  width: 100%;
+}
+
+.socialMedia.friendSocialMedia a i {
+  color: black;
+}
+
+.friendIntro {
+  margin-bottom: 40px;
+}
+
+.friendIntroText {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.header {
+  align-content: center;
+}
+
+/* Mobil */
+
+@media only screen and (max-width: 600px) {
+  .bestFriends {
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+  }
+  .friendTextBox {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .bestFriends .imageContainer {
+    flex-basis: 100%;
+    height: 10rem;
+    width: 2rem;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .friendContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .bestFriends{
+    flex-basis: 40%;
+    width: 700px;
+    flex-wrap: wrap;
+    height: 250px;
+  }
+  .friendTextBox {
+    flex-basis: 100%;
+  }
+}
+

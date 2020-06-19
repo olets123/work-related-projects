@@ -1,0 +1,140 @@
+/* HOME.CSS */
+
+.logo {
+  display: block;
+  margin: 7rem auto 25px auto;
+  width: 40%;
+  text-align: center;
+  z-index: 1;
+}
+
+.news { 
+  border: none;
+  padding-top: 50px;
+}
+
+.homeBackground {
+  text-align: center;
+  margin: 2rem auto 60px auto;
+  padding: 2rem 1rem 2rem 1rem;
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeBackground img {
+  width: 100%;
+  z-index: -9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* UPCOMING EVENTS */
+
+.uEvents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 10rem;
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: .2rem solid #F9cf36;
+} 
+.uEvents h5 {
+  flex-basis: 100%;
+  font-size: 2rem;
+}
+ 
+.uEvent {
+  border-radius: 1rem;
+  border-color: black;
+  display: flex;
+  color: black;
+  background-color: white;
+  min-width: 22%;
+  margin: 0 4rem 2rem 2rem;
+  position: relative;
+  height: 150px;
+  width: 550px;
+}
+
+.eDate.small  {
+  padding-right: 15px;
+  margin: 0 1rem 0 0;
+  flex-basis: 10%;
+}
+
+.uEvent .uText {
+  text-align: left;
+  flex-basis: 50%;
+}
+
+.uDesc {
+  width: 18rem;
+  height: 10rem;
+  text-align: left;
+}
+
+.uDesc p {
+  font-size: 1.4rem;
+  padding-left: 4px;
+}
+
+.eDate.small .eMonth {
+  font-size: 4rem;
+  border: none;
+}
+
+.eDate.small .eDay {
+  font-size: 6.7rem;
+}
+
+.uTitle {
+  font-size: 2.5rem;
+  margin: 5px 0;
+}
+
+.uFrame {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin-right: 2rem;
+  position: relative;
+  flex-basis: 40%;
+}
+
+.uFrame img {
+  max-height: 100%;
+}
+
+.eventDetailBtn.btn-small {
+  bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Mobil */
+@media only screen and (max-width: 1200px) {
+  .homeBackground { height: 50rem; margin-bottom: 2rem; }
+  .homeBackground img { width: auto; }
+}
+
+@media only screen and (max-width: 900px) {
+  .uEvent { width: 90%; margin: 0 auto; padding: 2rem; }
+}
+
+@media only screen and (max-width: 600px) { 
+  .news { width: 100%; margin: 0; height: auto; }
+  .uEvents { width: 100%; }
+  .uEvent .uFrame { display: none; }
+  .uEvent .eDate.small { padding: 0; }
+  .uEvent { padding: 0;  }
+  .logo { width: 90%; height: 50%; margin-bottom: 6px; }
+  .homeBackground { height: 350px; margin-bottom: 30px;}
+}
